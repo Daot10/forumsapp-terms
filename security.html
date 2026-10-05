@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Politique de sécurité — Forum business connect</title>
+  <meta name="description" content="Comment le compte, les paiements et les données sont protégés." />
+  <style>
+    :root { color-scheme: light; --blue: #2F6BFF; --text: #111113; --muted: #636366; --bg: #F2F2F7; --card: #ffffff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+    header { background: var(--blue); color: #fff; padding: 28px 20px 24px; }
+    header .wrap, main { max-width: 720px; margin: 0 auto; }
+    header p { margin: 8px 0 0; opacity: 0.92; font-size: 15px; }
+    h1 { margin: 0; font-size: 28px; letter-spacing: -0.4px; line-height: 1.2; }
+    main { padding: 20px 16px 48px; }
+    article { background: var(--card); border-radius: 18px; padding: 8px 20px 20px; }
+    h2 { font-size: 18px; margin: 22px 0 8px; letter-spacing: -0.2px; }
+    p { margin: 0 0 10px; font-size: 16px; }
+    .updated { color: var(--muted); font-size: 14px; margin: 16px 4px 0; }
+    a { color: var(--blue); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Politique de sécurité</h1>
+      <p>Forum business connect</p>
+    </div>
+  </header>
+  <main>
+    <p class="updated">Mise à jour : 5 octobre 2026</p>
+    <article>
+      <h2>1. Principes</h2>
+      <p>Forum business connect limite l’accès aux données au fonctionnement du service, chiffre les échanges (HTTPS) et garde les secrets techniques hors de l’application installée sur votre téléphone.</p>
+
+      <h2>2. Compte et accès</h2>
+      <p>L’authentification est gérée par Supabase Auth. Le mot de passe n’est pas lisible par l’équipe.</p>
+      <p>Une session expirée ou révoquée coupe l’accès aux espaces connectés.</p>
+      <p>Le rôle administrateur est distinct du compte étudiant. Il ne s’obtient pas depuis l’application : il est attribué aux e-mails explicitement autorisés.</p>
+      <p>Le compte Support qui vous écrit n’affiche pas le nom personnel d’un administrateur.</p>
+
+      <h2>3. Paiements et portefeuille</h2>
+      <p>Les encaissements et les versements Mobile Money passent par un prestataire dédié. Les clés de paiement restent sur le serveur (fonctions sécurisées), jamais dans l’application.</p>
+      <p>Le solde du créateur est tenu dans la base transactionnelle. Un retrait demande un numéro Mobile Money. Aucun document d’identité n’est exigé pour cette demande.</p>
+      <p>Un retrait en attente peut être versé par un administrateur, ou automatiquement si personne ne l’a ni approuvé ni refusé sous 48 heures.</p>
+
+      <h2>4. Données et infrastructure</h2>
+      <p>Les profils, événements, inscriptions et le portefeuille sont en base PostgreSQL, avec des règles d’accès par utilisateur.</p>
+      <p>Les publications de forums et les messages temps réel sont séparés de la base des paiements.</p>
+      <p>Les signatures d’accès aux visioconférences sont produites côté serveur.</p>
+      <p>Les journaux d’administration servent à tracer les actions sensibles (messages Support, réinitialisation de mot de passe, modération).</p>
+
+      <h2>5. Ce que vous pouvez faire</h2>
+      <p>Choisissez un mot de passe unique et ne le partagez pas.</p>
+      <p>Méfiez-vous des messages qui demandent votre code Mobile Money ou votre mot de passe : le Support ne vous les demandera pas.</p>
+      <p>Signalez un abus ou une faille à <a href="mailto:support@forums.app">support@forums.app</a>.</p>
+
+      <h2>6. Limites</h2>
+      <p>Aucun service en ligne n’est exempt de risque. En cas d’incident affectant vos données, nous vous informerons lorsque la loi l’exige et dès que l’information peut être communiquée sans aggraver le risque.</p>
+    </article>
+  </main>
+</body>
+</html>
